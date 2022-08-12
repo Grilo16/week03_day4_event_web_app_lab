@@ -1,0 +1,24 @@
+{% extends "header_template.html" %}
+
+{% block page_template %}
+
+{% for event in events %}
+{% if event.repeat %}
+<div class="repeating-events">
+    {% endif %}
+{% if not event.repeat %}
+<div class="not-repeating-events">
+    {% endif %}
+    
+    <a href="/event/{{events.index(event)}}">
+        {{event.name}}
+    </a>
+    <form action="/event/delete/{{events.index(event)}}" class="delete-event">
+            <input type="submit" value="Delete event">
+        </form>
+    
+    
+</div>
+    
+{% endfor %}
+{% endblock %}

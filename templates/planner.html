@@ -1,0 +1,35 @@
+{% extends "header_template.html" %}
+
+{% block page_template %}
+
+<form method="POST">
+    <label for="name">Event Name</label>
+    <input name="name">
+    <br>
+
+    <label for="date">Event Date</label>
+    <input type="date" name="date">
+    <br>
+    
+    <label for="repeat">Recurring?</label>
+    <input type="checkbox" name="repeat">
+    <br>
+    
+    <label for="location">Event Location</label>
+    <input name="location">
+    <br>
+    
+    <label for="max_guests">Maximum number of guests</label>
+    <input type="number" name="max_guests">
+    <br>
+    
+    
+    <label for="description">Event Description</label>
+    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+    <br>
+    
+    <input type="submit">
+    
+</form>
+
+{% endblock %}

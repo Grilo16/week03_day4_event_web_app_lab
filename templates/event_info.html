@@ -1,11 +1,21 @@
 {% extends "header_template.html" %}
 
 {% block page_template %}
-<p>{{event.date}}</p>
-<p>{{event.name}}</p>
-<p>{{event.max_guests}}</p>
-<p>{{event.location}}</p>
-<p>{{event.description}}</p>
-<p>{{event.repeat}}</p>
+<section class="event-info-section">
 
-{% endblock %}
+    <h2>Event: {{event.name}}</h2>
+    <h3>When: {{event.date}}</h3>
+    <h3>Where: {{event.location}}</h3>
+    <h3>Maximum number of guests: {{event.max_guests}}</h3>
+    <br>
+    <h3>Description: </h3>
+    <hr>
+    <p>{{event.description}}</p>
+    <hr>
+    {% if event.repeat %}
+    {% set recurring = "This is a recurring event" %}
+    <h4>{{recurring}}</h4>
+    {% endif %}
+    
+</section>
+    {% endblock %}

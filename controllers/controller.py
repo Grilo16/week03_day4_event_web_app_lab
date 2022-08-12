@@ -9,7 +9,7 @@ from datetime import date
 
 @app.route("/")
 def home():
-    return render_template("index.html", events = event_list)
+    return render_template("index.html", events = event_list, page_title = "Event planner", page_header = "Upcoming events")
 
 
 @app.route("/planner", methods=["GET", "POST"])
@@ -27,12 +27,12 @@ def task_planer():
         event_list.append(event)
         return redirect("/")
         
-    return render_template("planner.html")  
+    return render_template("planner.html", page_header="New Event")  
 
 @app.route("/event/<int:index>")
 def event_info(index):
     event = event_list[index]
-    return render_template("event_info.html", event = event)
+    return render_template("event_info.html", event = event, page_header="Event Details")
 
 
 @app.route("/event/delete/<int:index>")

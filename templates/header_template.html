@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{page_title}}</title>
 </head>
-
 <body>
-<nav>
-    <a href="/">Home page</a>
-    <a href="/planner">Plan a task</a>
-</nav>
+    <nav>
+        <a href="/">Events</a>
+        <a href="/planner">Create an event</a>
+    </nav>
+    <hr>
+    <h1>{{page_header}}</h1>
 {% block page_template %}
 
 {% endblock %}

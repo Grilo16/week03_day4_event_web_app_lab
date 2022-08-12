@@ -1,6 +1,89 @@
+h1{
+    border-radius: 16px;
+    text-align: center;
+    margin-left: 10%;
+    width: 80%;
+    background-color: rgb(42, 95, 165);
+}
+
+nav{
+    text-align: center;
+}
+
+nav>a{
+    text-decoration: none;
+    margin: 200px;
+    font-size: xx-large;
+    padding:2px;
+}
+
+.all-events{
+    margin-left:10%;
+    width:80%;
+}
+
+.display-events{
+    padding:1%;
+    background-color: blue;
+    display: grid;
+    grid-area: auto;
+    gap: 5px;
+    border-radius: 16px;
+    grid-template-columns: repeat(4, 1fr)   
+}
+
 .repeating-events{
+    border-radius: 16px;
+    padding:2%;
+    text-align: center;
     background-color: rgb(158, 229, 120);
 }
 .not-repeating-events{
+    border-radius: 16px;
+    text-align: center;
+    padding:2%;
     background-color: rgb(154, 131, 131);
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+#view-button{
+    padding: 5%;
+    border-radius: 8px;
+}
+
+#delete-button{
+    padding: 5%;
+    border-radius: 8px;
+    background-color: brown;
+}
+
+
+/* Style for event_info */
+
+.event-info-section{
+    text-align: center;
+    padding-top:1%;
+    padding-bottom:1%;
+    background-color: cornflowerblue;
+    width: 80%;
+    margin-left:10%;
+    border-radius: 8px;
+}
+
+/* Styling planner.html */
+.create-event-section{
+    text-align: center;
+    width: 80%;
+    margin-left:10%;
+    border-radius: 16px;
+    padding:1%;
+    background-color: rgb(130, 80, 255) ;
+}
+
+.input-label{
+    margin-top:1%
 }
